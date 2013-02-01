@@ -180,4 +180,5 @@ def adaptive_geohash_nearby_search(latitude, longitude, lower_cut, upper_cut, se
         sorted_list = sorted(sorted_list, key=lambda sort_elem : sort_elem[1])
         return [i[0] for i in sorted_list][lower_cut:upper_cut]
     else:
+        # Geohash search failed, signal the failure
         return None
